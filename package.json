@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "toran billups",
+    "email": "toranb@gmail.com"
+  },
+  "name": "django-ember-precompile",
+  "description": "ember.js precompiler for projects that use the django compressor",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toranb/django-ember-precompile"
+  },
+  "keywords": [
+    "testing",
+    "bdd"
+  ],
+  "main": "./lib/main",
+  "bin": {
+    "django-ember-precompile": "./bin/django-ember-precompile"
+  },
+  "engines": {
+    "node": ">=v0.8.1"
+  },
+  "licenses": [
+    "MIT"
+  ],
+  "dependencies": {
+    "jsdom": ""
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
