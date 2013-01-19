@@ -1,11 +1,11 @@
 
-An ember.js precompiler for projects that use the django compressor
+ember.js precompiler for projects that use the django compressor
 
 ##Why did you write another precompiler npm module?
 
 1. django projects have a quick hook to execute code with django compressor
-2. I prefer precompile my handlebars templates for ember.js when possible
-3. I honestly couldn't find an existing module that would do this for django
+2. I prefer to precompile my handlebars templates for ember.js when possible
+3. I couldn't find an existing npm module that was built to work with django compressor and ember.js
 
 ##How do I get started then?
 
@@ -13,17 +13,17 @@ First you need to install node.js if you have not already
 
 http://nodejs.org/download/
 
-You need to add django compressor to your project
+Add django compressor to your django web project
 
     pip install -r django_compressor
 
-Next you need to register a type to have the compressor fire off the precompile step
+Register a type to have the compressor fire off the precompile step (in your settings.py)
 
     COMPRESS_PRECOMPILERS = (
         ('text/x-handlebars', 'node node_modules/django-ember-precompile/bin/django-ember-precompile {infile}'),
     )
 
-Next you need to use the compressor to add the uncompiled handlebars templates in your html
+Finally in your html you need to reference the uncompiled handlebars templates
 
     {% load staticfiles %}
     {% load compress %}
@@ -32,8 +32,4 @@ Next you need to use the compressor to add the uncompiled handlebars templates i
     <script src="{% static 'script/app/templates/foo.handlebars' %}" type="text/x-handlebars"></script>
     {% endcompress %}
 
-Notice that the templates file extension above is "handlebars" -this is required to use this npm module
-
-##So what is missing from this test project today?
-
-1. Tech debt cleanup / basic unit testing to show how the project works with input from a web app
+Notice the above template has a file extension of "handlebars" -this is required to use this npm module
