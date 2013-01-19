@@ -13,6 +13,10 @@ First you need to install node.js if you have not already
 
 http://nodejs.org/download/
 
+Install the npm module
+
+    npm install django-ember-precompile
+
 Add django compressor to your django web project
 
     pip install -r django_compressor
