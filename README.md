@@ -36,4 +36,14 @@ Finally in your html you need to reference the uncompiled handlebars templates
     <script src="{% static 'script/app/templates/foo.handlebars' %}" type="text/x-handlebars"></script>
     {% endcompress %}
 
-Notice the above template has a file extension of "handlebars" -this is required to use this npm module
+This npm module makes a few assumptions to correctly register the template name with ember.js
+
+    1.) Each template must have a file extension of "handlebars"
+    2.) Each template must reside under a root "templates" directory
+
+##Development
+
+To run the tests
+
+    cd tests
+    ./runner.sh
