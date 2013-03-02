@@ -24,7 +24,7 @@ Add django compressor to your django web project
 Register a type to have the compressor fire off the precompile step (in your settings.py)
 
     COMPRESS_PRECOMPILERS = (
-        ('text/x-handlebars', 'node node_modules/django-ember-precompile/bin/django-ember-precompile {infile}'),
+        ('text/x-handlebars', 'node_modules/django-ember-precompile/bin/django-ember-precompile {infile}'),
     )
 
 Finally in your html you need to reference the uncompiled handlebars templates
