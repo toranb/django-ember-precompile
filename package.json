@@ -5,7 +5,7 @@
   },
   "name": "django-ember-precompile",
   "description": "ember.js precompiler for projects that use the django compressor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/toranb/django-ember-precompile"
