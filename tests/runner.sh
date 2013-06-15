@@ -1,7 +1,6 @@
 #!/bin/bash
 
 npm install jasmine-node
-npm install jsdom
 
 for file in *; do
   if [ ${file: -8} == ".spec.js" ]; then
