@@ -39,6 +39,13 @@ describe("CommandLineParser Tests", function() {
     expect(result['name']).toEqual('foo');
   });
 
+  it("returns templateName without hbs extension when valid filepath passed in", function() {
+    var tpl = path.join('file-system', 'app', 'templates', 'foo.hbs');
+    var sut = new Cli({args:['node', 'node_modules/django-ember-precompile/bin/django-ember-precompile', tpl]});
+    result = sut.parseCommandLineArgs();
+    expect(result['name']).toEqual('foo');
+  });
+
   it("returns template content when valid filepath passed in and it exists on the filesystem", function() {
     var tpl = path.join('file-system', 'app', 'templates', 'foo.handlebars');
     var sut = new Cli({args:['node', 'node_modules/django-ember-precompile/bin/django-ember-precompile', tpl]});
