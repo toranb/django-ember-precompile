@@ -28,7 +28,6 @@
     "MIT"
   ],
   "dependencies": {
-    "ember-template-compiler": "1.9.0-alpha",
     "jsdom": "0.11.1"
   },
   "devDependencies": {},
